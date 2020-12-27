@@ -1,0 +1,6 @@
+# System
+.DS_Store
+**/.DS_Store
+
+# IDE config
+.vscode/

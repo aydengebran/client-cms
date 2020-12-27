@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client CMS</title>
+  <link rel="stylesheet" href="css/style.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <section id="login" style="display: none;">
+    <div id="login-container">
+      <img src="./images/login.png">
+      <h3>Login</h3>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="name@example.com">
+
+
+
+      <div id="password-label-container">
+        <label for="password">Password</label>
+        <a id="forgot-password">Forgot Password?</a>
+      </div>
+      <input type="password" name="password" id="password" placeholder="•••••••">
+      <!-- <p id="forgot-password-text">A link will be sent to your email address to reset your password. If you do not recieve the link after a few minutes, please check your ‘junk’ folder.</p> -->
+
+
+
+      <div class="buttons-container">
+        <button class="secondary">Cancel</button>
+        <button class="primary">Login</button>
+      </div>
+    </div>
+  </section>
+  <main>
+    <h2>Admin CMS Panel</h2>
+    <nav>
+      <a class="selected">Website</a>
+      <a>Account</a>
+    </nav>
+    <section id="welcome" style="display: nose;">
+      <img src="./images/welcome.png">
+      <h3>Welcome</h3>
+      <p>Select from one of the tabs above to customise the behaviour of your website. If you need support, please feel free to <a href="https://aydengebran.com/contact" target="_blank">reach out</a> to me at any time.</p>
+    </section>
+    <section id="website" class="tab-controller" style="display: none;">
+      <div class="tab-container">
+        <h4>Website</h4>
+        <div class="scroll-container">
+          <div id="images" class="tab selected">
+            <div class="tab-title">Images</div>
+            <div class="tab-description">Manage website images</div>
+          </div>
+        </div>
+      </div>
+      <div id="images" class="tab-content">
+        <h4>Images</h4>
+        <div class="scroll-container">
+          <ul>
+            <li>
+              <img src="./images/reorder.svg" class="reorder">
+              <img class="preview" src="./images/Rectangle.png">
+              <div class="info-container">
+                <div class="title">img-1234.png</div>
+                <div class="size">250KB</div>
+              </div>
+              <img class="delete-image" src="./images/delete.svg" alt="Delete">
+            </li>
+          </ul>
+        </div>
+        <div class="actions-container">
+          <div class="buttons-container">
+            <button class="secondary">Cancel</button>
+            <button class="primary">Save</button>
+          </div>
+          <div class="warning-container">
+            <img src="./images/warning.svg">
+            <span>Changes you make will immediately affect the public version of your website</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="account" class="tab-controller">
+      <div class="tab-container">
+        <h4>Account</h4>
+        <div class="scroll-container">
+          <div id="images" class="tab selected">
+            <div class="tab-title">Password</div>
+            <div class="tab-description">Change account password</div>
+          </div>
+        </div>
+      </div>
+      <div id="password" class="tab-content">
+        <h4>Password</h4>
+        <ul>
+          <li>
+            <div class="title">Enter New Password</div>
+            <div class="content">
+              <p>
+                Must contain at least:<br>
+                • 8 characters<br>
+                • 1 number<br>
+                • 1 special character
+              </p>
+              <input type="password" name="password" id="password" placeholder="•••••••">
+            </div>
+          </li>
+          <li>
+            <div class="title">Confirm New Password</div>
+            <div class="content">
+              <p>Passwords must match</p>
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="•••••••">
+            </div>
+          </li>
+        </ul>
+        <div class="buttons-container">
+          <button class="secondary">Cancel</button>
+          <button class="primary">Save</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="delete-image-popup" class="popup-container">
+    <div class="popup">
+      <img src="./images/bin.png">
+      <h2>Delete Image</h2>
+      <p>This action cannot be undone</p>
+      <div class="buttons-container">
+        <button class="primary">Cancel</button>
+        <button class="secondary danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
